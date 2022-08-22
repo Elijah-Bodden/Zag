@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./Assets/logo.svg" width="256" height="256"></img><br>
+  <img src="./Assets/logo.svg"></img><br>
 </h1>
 <p align="center">
 Blazing-fast callback/promise-based events with a tiny footprint
