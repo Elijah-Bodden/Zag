@@ -1,18 +1,17 @@
-class AbstractMap {
+class Zag {
   constructor() {
     this.adjacencyList = {};
     this.nodes = {};
+    this.updateCallbacks = []
     this.distances = undefined;
     this.previous = undefined;
     this.computationRefreshed = false;
   }
   async onUpdate(callback) {
-    //Optional dependency; simply comment out the following line to make fully this utility self-contained
-    eventHandler.onReciept("abstractMapUpdate", callback);
+    this.updateCallbacks.push(callback)
   }
   async triggerUpdate(method, relevantInformation) {
-    //Optional dependency; simply comment out the following line to make fully this utility self-contained
-    eventHandler.dispatch("abstractMapUpdate", [method, relevantInformation]);
+    this.updateCallbacks.forEach(callback => callback(method, relevantInformation))
   }
   addEdge(i, j) {
     var nodePresences = [
@@ -55,11 +54,11 @@ class AbstractMap {
   async precomputeRoutes(source) {
     if (!Object.keys(this.nodes).includes(source))
       throw new Error(
-        `Requested source node (${source}) is not present within AbstractMap.__instance__.nodes`
+        `Requested source node (${source}) is not present within this Zag instance`
       );
     var dist = {};
     var prev = {};
-    var queue = new crudeQueue(); //must be included for this action to function--see source below
+    var queue = new crudeQueue(); //Necessary dependancy for pathfinding; see source below
     dist[source] = 0;
     Object.keys(this.adjacencyList).forEach((node) => {
       if (node !== source) {
