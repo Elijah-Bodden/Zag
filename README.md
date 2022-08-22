@@ -1,7 +1,9 @@
 <h1 align="center">
   <img src="./Assets/logo.svg" width="256" height="256"></img><br>
-  kNow
 </h1>
+<p align="center">
+Blazing-fast callback/promise-based events with a tiny footprint
+</p>
 <p align="center">
   <img src="https://img.shields.io/bundlephobia/minzip/@elijah-bodden/know/latest?label=Minzipped%20size&style=flat-square"/>
   <img src="https://img.shields.io/github/license/Elijah-Bodden/kNow?style=flat-square"/>
