@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./Assets/logo.svg" width="128" height="128"></img><br>
+  <img src="./Assets/logo.svg" width="256" height="256"></img><br>
   kNow
 </h1>
 <p align="center">
