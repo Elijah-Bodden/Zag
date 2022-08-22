@@ -141,6 +141,6 @@ Any and all contributions are greatly appreciated. If you want to see this proje
 
 ## Contact
 Elijah Bodden - elijahbodden@protonmail.com  
-Project - https://github.com/Elijah-Bodden/kNow  
-npm - https://www.npmjs.com/package/@elijah-bodden/know
+Project - https://github.com/Elijah-Bodden/Zag  
+npm - https://www.npmjs.com/package/@elijah-bodden/Zag
  
